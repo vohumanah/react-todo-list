@@ -10,6 +10,15 @@ class TextInput extends Component {
     }
   }
 
+  deleteLetter() {
+    //take current this.state.inputText
+    //delete letter
+    //update state
+    this.setState({
+      inputText: this.state.inputText.substring(0, this.state.inputText.length - 1)
+    });
+  }
+
   handleChange(event) {
     this.setState({
       inputText: event.target.value
